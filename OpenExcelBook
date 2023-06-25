@@ -1,0 +1,9 @@
+'FlagOpen=OpenBook(PathBook) 'NEW
+Function OpenBook(PathBook) 'EXPERT
+  OpenBook = 0
+  NameBook = GetNameBookFromPath(PathBook)
+  If (CheckOpenBook(NameBook) = 0) Then
+    Workbooks.Open filename:=PathBook
+    OpenBook = 1
+  End If
+End Function
